@@ -1,0 +1,25 @@
+I want to create my portfolio website. I want to write the code in HTML, CSS, Java Script only. Because I am planning to upload that on Github. I want clear and working code which is easy to maintain by non-tech person. Because I will add the page later and change the images by my self.
+This time I want precisely. So please follow my instruction and my layout in details.
+This is font and color code.
+accent color : #32cd32
+black text : #202020
+black varients : #353636, #494949, #5F5F5F, #737373, #898989, #9E9E9E, #B2B2B3, #C7C7C7, #F5F5F5
+Font : Google Sans Flex , (I used bold, semibold, regular and medium) from 60px (only headline), 48px to 10px. *you can adjust to be good appeal.
+There is two languages (Eng and Japanese). So please prepare for this in advance.
+Here is the used sizes:
+Homepage banner = 1440px x 720px
+Homepage icon = 427px x 427px
+Campaign detail page banner - 1440px x 380px
+Campaign detail page image & video sizes:
+for 2 column = w - 666px x h-'x'px
+for one color = w - 1380px x h-'x'px
+Spacing between items (vertical height) : connected item (50px or 75px), not-connect item (100px or 150px).
+about me page image size = w-666px x h-815px
+
+I want to show the images only first , when you move the mouse on image, the image a bit pop up and the green text will show with black overlay background. (the hover effect)
+For the video, I want when you click the video and the video will show pop-up and big size.
+In contact me page, I want when the fill the email, subject and messages and click 'submit'. I want to receive the mail with my email address. ( is it needed backend? coz I don't know 100% about back-end), Can you suggest me the best solution from your side. I want to receive the messages with my mail address. that is.  
+This is desktop size (1440px x xpx) - margin - 30px, gutter - 50px . It should be mobile responsive, but I am not thinking yet the layout of mobile design.
+I also want to link my LinkedIn and Behance account with icon.
+
+Can you ask me if you are not clear and need to confirm.

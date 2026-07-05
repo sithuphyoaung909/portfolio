@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Si Thu Phyo Aung</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400..700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="assets/images/homepages/myWebLogo.png">
+</head>
+<body>
+  <header class="sticky top-0 z-50 border-b border-[#B2B2B3] bg-[#F5F5F5]">
+    <div class="site-wrap h-[94px] md:h-[104px] flex items-center justify-between gap-5">
+      <div class="flex items-center gap-5 md:gap-9">
+        <button type="button" data-nav="work" class="logo-mark"><img src="assets/images/homepages/myLogo.png" alt="myLogo" class="logo-image"></button>
+        <div class="h-8 w-px bg-[#353636] md:hidden"></div>
+        <button type="button" id="mobileMenuToggle" class="md:hidden text-[20px] font-bold leading-none" aria-label="Open menu">☰</button>
+        <nav class="hidden md:flex items-center nav-label">
+          <button type="button" data-nav="work" class="px-3 md:px-10 h-11 md:h-14 border-l border-[#353636] nav-btn" data-i18n="navWork"></button>
+          <button type="button" data-nav="about" class="px-3 md:px-10 h-11 md:h-14 border-l border-[#353636] nav-btn" data-i18n="navAbout"></button>
+          <button type="button" data-nav="contact" class="px-3 md:px-10 h-11 md:h-14 border-l border-[#353636] border-r md:border-r-0 border-[#353636] nav-btn" data-i18n="navContact"></button>
+        </nav>
+      </div>
+
+      <div class="language-pill shrink-0">
+        <button type="button" data-lang="en" class="active">EN</button><button type="button" data-lang="jp">JPN</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobileMenu" class="mobile-menu-backdrop md:hidden" aria-hidden="true">
+    <div class="mobile-menu-panel">
+      <div class="flex justify-end">
+        <button type="button" id="mobileMenuClose" class="w-10 h-10 rounded-full border border-[#C7C7C7] text-[26px] leading-none" aria-label="Close menu">×</button>
+      </div>
+      <div class="mt-5">
+        <button type="button" data-nav="work" class="mobile-nav-btn" data-i18n="navWork"></button>
+        <button type="button" data-nav="about" class="mobile-nav-btn" data-i18n="navAbout"></button>
+        <button type="button" data-nav="contact" class="mobile-nav-btn" data-i18n="navContact"></button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section id="workView" class="view active">
+      <div class="site-wrap section-gap-connected">
+        <div class="h-[257.5px] md:h-[720px] relative overflow-hidden entrance">
+          <img id="heroBannerImage" alt="Homepage collage" class="w-full h-full object-cover hero-banner-image">
+          <div class="absolute inset-0 bg-transparent"></div>
+          <div class="absolute inset-0 grid place-items-center px-4">
+            <h1 class="sr-only" data-i18n="heroHeadline"></h1>
+          </div>
+        </div>
+
+      <div class="group-stack">
+
+        <div class="section-gap-not-connected subgroup-stack">
+          <h2 class="fs-48 font-semibold" data-i18n="sectionWeb"></h2>
+          <div id="webGrid" class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-[24px] lg:gap-[50px] section-gap-connected"></div>
+        </div>
+
+        <div class="section-gap-not-connected subgroup-stack">
+          <h2 class="fs-48 font-semibold" data-i18n="sectionDesign"></h2>
+          <div id="designGrid" class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-[50px] section-gap-connected"></div>
+        </div>
+
+        <div class="section-gap-not-connected subgroup-stack">
+          <h2 class="fs-48 font-semibold" data-i18n="sectionMotion"></h2>
+          <div id="motionGrid" class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-[50px] section-gap-connected"></div>
+        </div>
+
+        <div class="section-gap-not-connected subgroup-stack">
+          <h2 class="fs-48 font-semibold" data-i18n="sectionBrand"></h2>
+          <div id="brandGrid" class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-[50px] section-gap-connected"></div>
+        </div>
+
+        <div class="text-center section-gap-not-connected pb-[90px]">
+          <button type="button" id="backTopBtn" class="nav-utility-btn" data-i18n="backTop"></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="aboutView" class="view">
+      <div class="site-wrap section-gap-not-connected pb-[130px]">
+        <div class="grid xl:grid-cols-[666px_1fr] gap-[50px] items-start">
+          <img src="assets/images/homepages/aboutMe_image2.png" alt="Portrait" class="w-full max-w-[372px] xl:max-w-none h-auto xl:h-[815px] object-cover mx-auto xl:mx-0">
+          <div>
+            <p class="fs-36 font-semibold" data-i18n="aboutHello"></p>
+            <h2 class="headline mt-4" data-i18n="aboutRole"></h2>
+            <p class="fs-20 mt-8" data-i18n="aboutBody"></p>
+            <h3 class="fs-36 font-semibold mt-12" data-i18n="aboutToolbox"></h3>
+            <!-- Replace these PNG files in assets/icons/ with your own icon files using the same names. -->
+            <div class="flex flex-wrap gap-4 md:gap-5 mt-6" id="toolboxIcons">
+              <img src="assets/icons/photoshop.jpg" alt="Adobe Photoshop" class="toolbox-icon">
+              <img src="assets/icons/illustrator.jpg" alt="Adobe Illustrator" class="toolbox-icon">
+              <img src="assets/icons/afterEffect.jpg" alt="Adobe After Effects" class="toolbox-icon">
+              <img src="assets/icons/premierePro.jpg" alt="Adobe Premiere Pro" class="toolbox-icon">
+              <img src="assets/icons/figma.jpg" alt="Figma" class="toolbox-icon">
+              <img src="assets/icons/html-5.png" alt="HTML" class="toolbox-icon">
+              <img src="assets/icons/css-3.png" alt="CSS" class="toolbox-icon">
+            </div>
+           <div class="mt-10 flex flex-col sm:flex-row gap-3">
+            <a
+              href="tel:+8107089814547"
+              class="inline-flex items-center justify-center h-11 px-5 rounded-xl border border-[#32cd32] text-[#32cd32] text-[16px] md:text-[18px] font-semibold"
+              data-i18n="aboutContactPhone"
+            ></a>
+
+            <button
+              type="button"
+              data-nav="contact"
+              class="inline-flex items-center justify-center h-11 px-5 rounded-xl bg-[#32cd32] text-[#F5F5F5] text-[16px] md:text-[18px] font-semibold"
+              data-i18n="aboutContactEmail"
+            ></button>
+          </div>
+            <p class="mt-3 text-[12px] md:text-[14px] text-[#5F5F5F]">
+              <span data-i18n="aboutPhoneHint"></span>
+              <a href="tel:+8107089814547" class="underline text-[#202020]">+81 070-8981-4547</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contactView" class="view">
+      <div class="site-wrap section-gap-not-connected pb-[120px]">
+        <h2 class="fs-48 font-semibold" data-i18n="contactTitle"></h2>
+        <form id="contactForm" class="section-gap-connected space-y-8 md:space-y-12">
+          <div class="grid md:grid-cols-2 gap-6 md:gap-[50px]">
+            <div>
+              <label for="firstName" class="fs-20 font-medium" data-i18n="contactFirstName"></label>
+              <input id="firstName" name="firstName" required class="w-full mt-4 border border-[#5F5F5F] rounded-[18px] bg-transparent h-16 md:h-20 px-6 fs-20">
+            </div>
+            <div>
+              <label for="lastName" class="fs-20 font-medium" data-i18n="contactLastName"></label>
+              <input id="lastName" name="lastName" required class="w-full mt-4 border border-[#5F5F5F] rounded-[18px] bg-transparent h-16 md:h-20 px-6 fs-20">
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="fs-20 font-medium" data-i18n="contactEmail"></label>
+            <input id="email" type="email" name="email" required class="w-full mt-4 border border-[#5F5F5F] rounded-[18px] bg-transparent h-16 md:h-20 px-6 fs-20">
+          </div>
+
+          <div>
+            <label for="subject" class="fs-20 font-medium" data-i18n="contactSubject"></label>
+            <input id="subject" name="subject" required class="w-full mt-4 border border-[#5F5F5F] rounded-[18px] bg-transparent h-16 md:h-20 px-6 fs-20">
+          </div>
+
+          <div>
+            <label for="message" class="fs-20 font-medium" data-i18n="contactMessage"></label>
+            <textarea id="message" name="message" required class="w-full mt-4 border border-[#5F5F5F] rounded-[18px] bg-transparent min-h-[260px] md:min-h-[340px] px-6 py-5 fs-20"></textarea>
+          </div>
+
+          <button type="submit" class="bg-[#32cd32] text-[#F5F5F5] rounded-xl px-6 h-11 text-[18px] md:text-[20px] font-semibold" data-i18n="contactSubmit"></button>
+        </form>
+      </div>
+    </section>
+
+    <section id="campaignView" class="view">
+      <div class="site-wrap section-gap-connected pb-[120px]">
+        <img id="campaignBanner" src="assets/images/saferEveryday/saferEverydayBanner.jpg" alt="Campaign banner" class="w-full h-[120px] md:h-[380px] object-cover campaign-banner-image">
+        <div class="campaign-intro-gap">
+          <h2 id="campaignTitle" class="fs-48 font-bold"></h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-[50px] mt-6 md:mt-8 campaign-meta">
+            <div class="meta-item meta-problem">
+              <h3 class="fs-36 font-semibold" data-i18n="campaignProblem"></h3>
+              <p id="campaignProblemText" class="campaign-copy"></p>
+            </div>
+            <div class="meta-item meta-approach">
+              <h3 class="fs-36 font-semibold" data-i18n="campaignApproach"></h3>
+              <p id="campaignApproachText" class="campaign-copy"></p>
+            </div>
+            <div class="meta-item meta-role">
+              <h3 class="fs-36 font-semibold" data-i18n="campaignRole"></h3>
+              <ul id="campaignRoleText" class="campaign-copy list-disc pl-5 space-y-1"></ul>
+            </div>
+            <div class="meta-item meta-impact">
+              <h3 class="fs-36 font-semibold" data-i18n="campaignImpact"></h3>
+              <p id="campaignImpactText" class="campaign-copy"></p>
+            </div>
+          </div>
+          <p id="campaignExtraText" class="fs-14 mt-5 md:mt-8 max-w-[1200px]"></p>
+        </div>
+        <div id="campaignTopLinkWrap" class="mt-6 md:mt-8"></div>
+
+        <div id="campaignMediaGrid" class="grid md:grid-cols-2 gap-4 md:gap-[50px] campaign-media-gap"></div>
+
+        <div id="campaignBottomLinkWrap" class="text-center mt-10 md:mt-14"></div>
+        <div class="text-center campaign-back-gap">
+          <button type="button" class="nav-utility-btn" data-back="work" data-i18n="back"></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="motionView" class="view">
+      <div class="site-wrap section-gap-connected pb-[120px]">
+        <div class="h-[120px] md:h-[380px] relative overflow-hidden">
+  <img id="motionBannerImage" src="assets/videos/moGraphicCollection/moGraphicBanner.jpg" alt="Motion banner" class="w-full h-full object-cover">
+</div>
+        <div class="mt-6 md:mt-8">
+          <h3 class="fs-36 font-semibold" data-i18n="motionCollectionSubtitle"></h3>
+          <p class="fs-20 mt-4 md:mt-5 w-full max-w-none" data-i18n="motionCollectionBody"></p>
+        </div>
+        <div id="motionVideoGrid" class="grid md:grid-cols-2 gap-[16px] md:gap-[25px] mt-6 md:mt-8"></div>
+        <div class="text-center section-gap-not-connected">
+          <button type="button" class="nav-utility-btn" data-back="work" data-i18n="back"></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-[#B2B2B3]">
+    <div class="site-wrap h-[110px] flex items-center justify-between">
+      <p class="fs-20" data-i18n="footer"></p>
+      <div class="flex gap-4 md:gap-8">
+        <!-- <a id="behanceLink" href="https://www.behance.net" target="_blank" rel="noreferrer" aria-label="Behance" class="w-10 h-10 md:w-14 md:h-14 border-2 border-[#202020] rounded-md grid place-items-center text-[20px] md:text-[30px] font-bold">Be</a> -->
+        <a id="linkedinLink" href="https://www.linkedin.com/in/si-thu-phyo-aung-96b712113/" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="w-10 h-10 md:w-14 md:h-14 border-2 border-[#202020] rounded-md grid place-items-center text-[22px] md:text-[30px] font-bold">in</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="videoModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Video popup">
+    <div class="modal-content">
+      <div class="flex justify-end p-4 bg-[#202020]">
+        <button type="button" id="closeModalBtn" class="text-[#F5F5F5] text-[20px] md:text-[28px]">Close</button>
+      </div>
+      <div id="videoFrameWrap"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
