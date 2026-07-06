@@ -97,9 +97,12 @@ function getVideoThumbnail(media) {
 
   function handleHashChange() {
     const route = getHashRoute();
-
-    if (!route || route === "work") {
-      showView("work", false);
+    if (route === "campaign") {
+      if (app.openCampaignId) {
+        openCampaign(app.openCampaignId, true, false);
+      } else {
+        showView("work", false);
+      }
       return;
     }
 
@@ -135,11 +138,10 @@ function getVideoThumbnail(media) {
     closeMobileMenu();
     window.scrollTo({ top: 0, behavior: "smooth" });
 
-    if (pushHash) {
+    // Only push simple hashes for non-campaign views
+    if (pushHash && viewName !== "campaign") {
       const nextHash = `#${viewName}`;
-      if (window.location.hash !== nextHash) {
-        window.location.hash = viewName;
-      }
+      if (window.location.hash !== nextHash) window.location.hash = viewName;
     }
   }
 
@@ -320,7 +322,6 @@ function getVideoThumbnail(media) {
       }
     });
 
-    if (updateView) showView("campaign");
   }
 
   function createAutoCampaign(id) {
