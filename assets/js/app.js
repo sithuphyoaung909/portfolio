@@ -91,7 +91,35 @@ function getVideoThumbnail(media) {
     renderMotionVideos();
   }
 
-  function showView(viewName) {
+  function getHashRoute() {
+    return window.location.hash.replace(/^#/, "").trim();
+  }
+
+  function handleHashChange() {
+    const route = getHashRoute();
+
+    if (!route || route === "work") {
+      showView("work", false);
+      return;
+    }
+
+    if (route === "about" || route === "contact" || route === "motion") {
+      showView(route, false);
+      return;
+    }
+
+    if (route.startsWith("campaign:")) {
+      const campaignId = decodeURIComponent(route.slice("campaign:".length));
+      if (campaignId) {
+        openCampaign(campaignId, true, false);
+        return;
+      }
+    }
+
+    showView("work", false);
+  }
+
+  function showView(viewName, pushHash = true) {
     app.currentView = viewName;
     const map = {
       work: "workView",
@@ -100,11 +128,19 @@ function getVideoThumbnail(media) {
       campaign: "campaignView",
       motion: "motionView"
     };
+
     document.querySelectorAll(".view").forEach((v) => v.classList.remove("active"));
     document.getElementById(map[viewName]).classList.add("active");
     updateNavState();
     closeMobileMenu();
     window.scrollTo({ top: 0, behavior: "smooth" });
+
+    if (pushHash) {
+      const nextHash = `#${viewName}`;
+      if (window.location.hash !== nextHash) {
+        window.location.hash = viewName;
+      }
+    }
   }
 
   function updateNavState() {
@@ -130,7 +166,7 @@ function getVideoThumbnail(media) {
     menu.setAttribute("aria-hidden", "false");
   }
 
-  function openCampaign(id, updateView = true) {
+  function openCampaign(id, updateView = true, pushHash = true) {
     const campaign = campaignData[id] || createAutoCampaign(id);
     if (!campaign) return;
     app.openCampaignId = id;
@@ -186,6 +222,15 @@ function getVideoThumbnail(media) {
       bottomBtn.className = "inline-flex items-center justify-center px-6 h-12 rounded-xl border border-[#32cd32] text-[#32cd32] font-semibold";
       bottomBtn.textContent = label;
       bottomWrap.appendChild(bottomBtn);
+    }
+
+    if (updateView) showView("campaign", false);
+
+    if (pushHash) {
+      const nextHash = `#campaign:${encodeURIComponent(id)}`;
+      if (window.location.hash !== nextHash) {
+        window.location.hash = `campaign:${encodeURIComponent(id)}`;
+      }
     }
 
     function localizedText(value) {
@@ -522,4 +567,12 @@ function getVideoThumbnail(media) {
 
   initEvents();
   applyLanguage();
+
+  window.addEventListener("hashchange", handleHashChange);
+
+  if (window.location.hash) {
+    handleHashChange();
+  } else {
+    window.location.hash = "work";
+  }
 })();
