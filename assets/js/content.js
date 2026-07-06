@@ -92,7 +92,7 @@ window.PORTFOLIO_DATA = {
       { title: { en: "My Portfolio Project", jp: "私のポートフォリオプロジェクト" }, image: "assets/images/homepages/portfolioHomepage1.jpg", campaignId: "portfolio" }
     ],
     design: [
-      { title: { en: "Soon Mite Campaign", jp: "Soon Mite キャンペーン" }, image: "assets/images/homepages/SoonMite_Homepage.jpg", campaignId: "soomMite" },
+      { title: { en: "Soon Mite Campaign", jp: "Soon Mite キャンペーン" }, image: "assets/images/homepages/SoonMite_Homepage.jpg", campaignId: "soonMite" },
       { title: { en: "Viber Sticker Pack Campaign", jp: "Viberステッカーパックキャンペーン" }, image: "assets/images/homepages/viberStickerPack_Homepage.jpg", campaignId: "viberStickerPack" },
       { title: { en: "Safer Everyday Campaign", jp: "Safer Everyday キャンペーン" }, image: "assets/images/homepages/saferEveryday_Homepage.jpg", campaignId: "saferEveryday" },
       { title: { en: "Social Engagement Campaign", jp: "Social Engagement キャンペーン" }, image: "assets/images/homepages/socialEngagement_Homepage.jpg", campaignId: "Social Engagement" },
@@ -755,12 +755,12 @@ window.PORTFOLIO_DATA = {
             jp: "このキャンペーンでは、コンセプト設計とキービジュアル制作を担当..."
           },
         },*/
-        { type: "image", src: "assets/branding-EventManagement/gfAnni/gf4Anni01.jpg", fullWidth: true },
-        { type: "image", src: "assets/branding-EventManagement/gfAnni/gf4Anni02.jpg", fullWidth: true },
-        { type: "image", src: "assets/branding-EventManagement/gfAnni/gf4Anni03.jpg", fullWidth: true },
-        { type: "image", src: "assets/branding-EventManagement/gfAnni/gf4Anni04.jpg", fullWidth: true },
-        { type: "image", src: "assets/branding-EventManagement/gfAnni/gf4Anni05.jpg", fullWidth: true },
-        { type: "image", src: "assets/branding-EventManagement/gfAnni/gf4Anni06.jpg", fullWidth: true }
+        { type: "image", src: "assets/branding-EventManagement/gfAnni/gf4anni01.jpg", fullWidth: true },
+        { type: "image", src: "assets/branding-EventManagement/gfAnni/gf4anni02.jpg", fullWidth: true },
+        { type: "image", src: "assets/branding-EventManagement/gfAnni/gf4anni03.jpg", fullWidth: true },
+        { type: "image", src: "assets/branding-EventManagement/gfAnni/gf4anni04.jpg", fullWidth: true },
+        { type: "image", src: "assets/branding-EventManagement/gfAnni/gf4anni05.jpg", fullWidth: true },
+        { type: "image", src: "assets/branding-EventManagement/gfAnni/gf4anni06.jpg", fullWidth: true }
       ]
     },
     arEvent: {
